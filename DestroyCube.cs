@@ -1,16 +1,16 @@
 using UnityEngine;
 
-public class HelloWorld : MonoBehaviour
+public class DestroyCube : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        print("crickets");  
+        Destroy(gameObject);
     }
 
     // Update is called once per frame
     void Update()
     {
-        print("crickets");
+        
     }
 }
