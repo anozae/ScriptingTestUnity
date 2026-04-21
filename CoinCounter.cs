@@ -1,7 +1,11 @@
 using UnityEngine;
 
-public class Coin : MonoBehaviour
+
+
+public class CoinCounter : MonoBehaviour
 {
+    public int coins = 0;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,9 +18,9 @@ public class Coin : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void CollectCoins()
     {
-        other.GetComponent<CoinCounter>().CollectCoins();
-        Destroy(gameObject);
+        coins++;
+        print(coins);
     }
 }

@@ -1,12 +1,14 @@
 using Unity.VectorGraphics;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using TMPro;
 
 public class Timer : MonoBehaviour
 {
 
   public float seconds;
- public float minutes;
+    public float minutes;
+    public TextMeshProUGUI TimerUI;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -30,5 +32,8 @@ public class Timer : MonoBehaviour
                 EditorSceneManager.LoadScene(EditorSceneManager.GetActiveScene().name);
             }
         }
+        int roundSeconds = Mathf.RoundToInt(seconds);
+        TimerUI.text = minutes + ":" + roundSeconds;
+
     }
 }
